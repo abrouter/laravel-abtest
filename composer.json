@@ -2,7 +2,7 @@
     "name": "abrouter/abrouter-laravel-client",
     "type": "library",
     "description": "AbrLaravelClient :construction_worker_woman: is a PHP client for laravel to run ab-tests via ABRouter.",
-    "license": "GPL",
+    "license": "LGPL-3.0-or-later",
     "autoload": {
         "psr-4": {
             "Abrouter\\LaravelClient\\": "src/"
