@@ -1,0 +1,22 @@
+{
+    "name": "abrouter/abrouter-laravel-client",
+    "type": "library",
+    "description": "AbrLaravelClient :construction_worker_woman: is a PHP client for laravel to run ab-tests via ABRouter.",
+    "license": "GPL",
+    "autoload": {
+        "psr-4": {
+            "Abrouter\\LaravelClient\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alex Yatsenko",
+            "email": "abrouter@proxiedmail.com"
+        }
+    ],
+    "require": {
+        "php": "^5.5 || ^7.0",
+        "laravel/framework": "^5.6 || ^6.0 || ^7.0 || ^8.0",
+        "abrouter/abrouter-php-client": "^0.1.1"
+    }
+}
