@@ -4,11 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8a54127a8d7317fdcad81bb38b9afe57",
+    "content-hash": "ec48051f835e8b1dd0e6bc17a596179f",
     "packages": [
         {
             "name": "abrouter/abrouter-php-client",
-            "version": "0.2.0",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/abrouter/abrouter-php-client.git",
@@ -49,7 +49,7 @@
             "description": "AbrPHPClient :construction_worker_woman: is a PHP library to run ab-tests via ABRouter.",
             "support": {
                 "issues": "https://github.com/abrouter/abrouter-php-client/issues",
-                "source": "https://github.com/abrouter/abrouter-php-client/tree/0.2.0"
+                "source": "https://github.com/abrouter/abrouter-php-client/tree/0.3.0"
             },
             "time": "2021-10-09T10:31:36+00:00"
         },
