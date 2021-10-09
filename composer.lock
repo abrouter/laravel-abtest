@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ec48051f835e8b1dd0e6bc17a596179f",
+    "content-hash": "cbf5b33cb6230505a99aef72553dadd7",
     "packages": [
         {
             "name": "abrouter/abrouter-php-client",
-            "version": "0.3.0",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/abrouter/abrouter-php-client.git",
-                "reference": "5e428c16c190f2e4e0f7b7464d35c03d4dafcc0b"
+                "reference": "21983ff27b201e17443876b76f5b212120883baf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/abrouter/abrouter-php-client/zipball/5e428c16c190f2e4e0f7b7464d35c03d4dafcc0b",
-                "reference": "5e428c16c190f2e4e0f7b7464d35c03d4dafcc0b",
+                "url": "https://api.github.com/repos/abrouter/abrouter-php-client/zipball/21983ff27b201e17443876b76f5b212120883baf",
+                "reference": "21983ff27b201e17443876b76f5b212120883baf",
                 "shasum": ""
             },
             "require": {
@@ -38,7 +38,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL"
+                "LGPL-3.0-or-later"
             ],
             "authors": [
                 {
@@ -49,9 +49,9 @@
             "description": "AbrPHPClient :construction_worker_woman: is a PHP library to run ab-tests via ABRouter.",
             "support": {
                 "issues": "https://github.com/abrouter/abrouter-php-client/issues",
-                "source": "https://github.com/abrouter/abrouter-php-client/tree/0.3.0"
+                "source": "https://github.com/abrouter/abrouter-php-client/tree/0.4.0"
             },
-            "time": "2021-10-09T10:31:36+00:00"
+            "time": "2021-10-09T11:18:16+00:00"
         },
         {
             "name": "art4/json-api-client",
