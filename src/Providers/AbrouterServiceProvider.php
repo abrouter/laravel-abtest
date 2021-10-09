@@ -1,7 +1,7 @@
 <?php
 declare(strict_types = 1);
 
-namespace Abrouter\LaravelClient;
+namespace Abrouter\LaravelClient\Providers;
 
 use Abrouter\Client\Config\Config;
 use Illuminate\Support\ServiceProvider;
