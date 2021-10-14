@@ -1,7 +1,7 @@
 # ABRouter Laravel Bridge
 
 ABRouter Laravel Bridge :construction_worker_woman: is a simple bridge for base library to run ab-tests via ABRouter with Laravel.
-You can find base PHP library in (https://github.com/abrouter/abrouter-php-client)
+You can find base PHP library in https://github.com/abrouter/abrouter-php-client
 
 # What is the ABRouter service ? 
 
