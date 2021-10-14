@@ -1,6 +1,7 @@
-# AbrPHPClient
+# ABRouter Laravel Bridge
 
-AbrPHPClient :construction_worker_woman: is a PHP library to run ab-tests via ABRouter.
+ABRouter Laravel Bridge :construction_worker_woman: is a simple bridge for base library to run ab-tests via ABRouter with Laravel.
+You can find base PHP library in (https://github.com/abrouter/abrouter-php-client)
 
 # What is the ABRouter service ? 
 
@@ -14,55 +15,47 @@ Available for free.
 Via composer
 
 ``` bash
-$ composer require abrouter/abrouter-php-client
+$ composer require abrouter/abrouter-laravel-bridge
 ```
+
+## Setting service provider
+This package provide auto discovery for service provider
+
+If Laravel package auto-discovery is disabled, add service providers manually. There are two service providers you must add:
+
+```
+\Abrouter\LaravelClient\Providers\AbrouterServiceProvider
+```
+
+### Publish client configuration:
+
+```bash
+php artisan vendor:publish --tag=abrouter
+```
+
 
 ## :rocket: Usage
 
-Client is uses [PHP-DI](https://github.com/PHP-DI/PHP-DI) for DI. If you're uses own DI, you must to configure it in a such way as on example below. 
-If you're not uses any DI, let's move php-di from dev-dependency to dependency:
-``` bash
-$ composer require "php-di/php-di": "^6.0"
-```
-
-### Using with PHP-DI
-
 ```php
-use Abrouter\Client\Config\Config;
-use DI\ContainerBuilder;
 use Abrouter\Client\Client;
 
-require '/app/vendor/autoload.php';
-
-$containerBuilder = new ContainerBuilder();
-$di = $containerBuilder->build();
-
-$token = 'Bearer Your Token';
-
-$di->set(Config::class, new Config($token, 'https://abrouter.com'));
-/**
- * @var Client $client
- */
-$client = $di->make(Abrouter\Client\Client::class);
-$userSignature = uniqid();
-$experimentId = 'B2341200-0000-0000-00342340';
-
-
-$runExperimentResult = $client->experiments()->run($userSignature, $experimentId);
-$experimentId = $runExperimentResult->getExperimentId(); //form-color
-$branchId = $runExperimentResult->getBranchId(); //red
-echo '<button style="color: '. $branchId .'"></button>';
+class ExampleController
+{
+    public function __invoke(Client $client)
+    {
+        $buttonColor = $client->experiments()->run(uniqid(), 'D1D06000-0000-0000-00005030');
+        return view('button', [
+            'color' => $buttonColor->getBranchId(),
+        ]);
+    }
+}
 ```
 
 You can create an experiment and get your token and id of experiment on [ABRouter](https://abrouter.com) or just read the [docs](https://abrouter.com/en/docs). 
 
-## :white_check_mark: Testing
-Requires docker-compose and docker installed.
 
-``` bash
-$ make up
-$ make test-run
-```
+## Example
+You can get an dockerized usage example by the following link: (https://github.com/abrouter/laravel-example)
 
 ## :wrench: Contributing
 
