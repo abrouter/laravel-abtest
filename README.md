@@ -15,7 +15,7 @@ Available for free.
 Via composer
 
 ``` bash
-$ composer require abrouter/abrouter-laravel-abtests
+$ composer require abrouter/laravel-abtests
 ```
 
 ## Setting service provider
