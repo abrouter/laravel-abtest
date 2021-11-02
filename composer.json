@@ -1,5 +1,5 @@
 {
-    "name": "abrouter/abrouter-laravel-bridge",
+    "name": "abrouter/abrouter-laravel-abtest",
     "type": "library",
     "description": "AbrLaravelClient :construction_worker_woman: is a PHP client for laravel to run ab-tests via ABRouter.",
     "license": "LGPL-3.0-or-later",
