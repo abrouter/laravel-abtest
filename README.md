@@ -1,4 +1,4 @@
-# ABRouter Laravel Bridge (A/B | Split Tests)
+# ABRouter Laravel A/B Tests | Split Tests
 
 ABRouter Laravel Bridge :construction_worker_woman: is a simple bridge for base library to run ab-tests via ABRouter with Laravel.
 You can find base PHP library in https://github.com/abrouter/abrouter-php-client
@@ -15,7 +15,7 @@ Available for free.
 Via composer
 
 ``` bash
-$ composer require abrouter/abrouter-laravel-bridge
+$ composer require abrouter/abrouter-laravel-abtests
 ```
 
 ## Setting service provider
