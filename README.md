@@ -25,10 +25,10 @@ $ composer require abrouter/laravel-abtest
 ## Setting service provider
 This package provide auto discovery for service provider
 
-If Laravel package auto-discovery is disabled, add service providers manually. There are two service providers you must add:
+If Laravel package auto-discovery is disabled, add service providers manually to /config/app.php. There are service provider you must add:
 
 ```
-\Abrouter\LaravelClient\Providers\AbrouterServiceProvider
+\Abrouter\LaravelClient\Providers\AbrouterServiceProvider::class
 ```
 
 ### Publish client configuration:
