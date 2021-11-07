@@ -1,15 +1,19 @@
 # ABRouter Laravel A/B Tests | Split Tests
 
-ABRouter Laravel Bridge :construction_worker_woman: is a simple bridge for base library to run ab-tests via ABRouter with Laravel.
+ABRouter AB Test :construction_worker_woman: is a simple bridge for base library to run A/B tests via [ABRouter](https://abrouter.com) with Laravel.
 You can find base PHP library in https://github.com/abrouter/abrouter-php-client
 
 # What is the ABRouter service ? 
 
-[ABRouter](https://abrouter.com) is the service to manage experiments(ab-tests). The service provides easy to manage dashboard to get experiments under control.
+[ABRouter](https://abrouter.com) is the service to manage experiments(A/B split tests). The service provides easy to manage dashboard to keep experiments under control.
 There you can create experiments, branches and set a percentage for every branch. Then, when you're running an ab-test on PHP you will receive a perfect branch-wise response that following the rules, that you set up.
 
 Can be also used as a feature flag or feature toggle.
 Available for free. 
+
+## Prepare your first A/B test
+Besides of the installing this package you need to have an account on [ABRouter](https://abrouter.com). Your token and experiment id will be also there.
+Feel free to read step by step instruction [Impelementing A/B tests on Laravel](https://abrouter.com/en/laravel-how-to-easily-run-ab-tests)
 
 ## :package: Install
 Via composer
