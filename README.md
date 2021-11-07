@@ -41,6 +41,14 @@ php artisan vendor:publish --tag=abrouter
 
 Put your ABRouter token in /config/abrouter.php. You can find this token in [ABRouter dashboard](https://abrouter.com/en/board).
 
+```php
+return [
+    'token' => '14da89de1713a74c1ed50aafaff18c24bf372a9913e67e6a7a915def3332a97c9c9ecbe2cd6d3047',
+    'host' => 'https://abrouter.com',
+];
+```
+
+
 ## :rocket: Usage
 
 ```php
