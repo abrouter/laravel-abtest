@@ -37,6 +37,9 @@ If Laravel package auto-discovery is disabled, add service providers manually to
 php artisan vendor:publish --tag=abrouter
 ```
 
+### Configure ABRouter client:
+
+Put your ABRouter token in /config/abrouter.php. You can find this token in [ABRouter dashboard](https://abrouter.com/en/board).
 
 ## :rocket: Usage
 
