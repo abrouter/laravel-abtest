@@ -13,7 +13,7 @@ Available for free.
 
 ## Prepare your first A/B test
 Besides of the installing this package you need to have an account on [ABRouter](https://abrouter.com). Your token and experiment id will be also there.
-Feel free to read step by step instruction [Impelementing A/B tests on Laravel](https://abrouter.com/en/laravel-how-to-easily-run-ab-tests)
+Feel free to read step by step instruction [Impelementing A/B tests on Laravel](https://abrouter.com/en/laravel-ab-tests)
 
 ## :package: Install
 Via composer
