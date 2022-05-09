@@ -1,6 +1,6 @@
 # ABRouter Laravel A/B Tests | Split Tests
 
-ABRouter AB Test :construction_worker_woman: is a simple package for base library to run A/B tests via [ABRouter](https://abrouter.com) with Laravel.
+ABRouter AB Test :construction_worker_woman: is a simple package for base library to run A/B tests via [ABRouter (open-source)](https://abrouter.com) with Laravel.
 You can find base PHP library in https://github.com/abrouter/abrouter-php-client
 
 # What is the ABRouter service ? 
