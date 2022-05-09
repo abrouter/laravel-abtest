@@ -5,11 +5,23 @@ You can find base PHP library in https://github.com/abrouter/abrouter-php-client
 
 # What is the ABRouter service ? 
 
-[ABRouter](https://abrouter.com) is the service to manage experiments(A/B split tests). The service provides easy to manage dashboard to keep experiments under control.
-There you can create experiments, branches and set a percentage for every branch. Then, when you're running an ab-test on PHP you will receive a perfect branch-wise response that following the rules, that you set up.
+[ABRouter](https://abrouter.com) is the open-source product to manage experiments(A/B split tests). The service provides easy to manage dashboard to keep experiments under control.
+You can create experiments, branches and set up a percentage for every branch. Then, when you're running an ab-test on PHP you will receive a perfect branch-wise response that following the rules, that you set up.
 
 Can be also used as a feature flag or feature toggle.
 Available for free. 
+
+You can find the ABRouter product source code by the following link: https://github.com/abrouter/compose
+
+## Features
+
+🛠 A/B Tests
+
+🛠 Feature flags
+
+🛠 Built-in statistics
+
+🛠 Incredible UI to manage it 
 
 ## Prepare your first A/B test
 Besides of the installing this package you need to have an account on [ABRouter](https://abrouter.com). Your token and experiment id will be also there.
