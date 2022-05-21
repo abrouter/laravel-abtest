@@ -3,13 +3,15 @@
 ABRouter AB Test :construction_worker_woman: is a simple package for base library to run A/B tests via [ABRouter (open-source)](https://abrouter.com) with Laravel.
 You can find base PHP library in https://github.com/abrouter/abrouter-php-client
 
+You're welcome to [visit the docs](https://docs.abrouter.com).
+
 # What is the ABRouter service ? 
 
 [ABRouter](https://abrouter.com) is the open-source product to manage experiments(A/B split tests). The service provides easy to manage dashboard to keep experiments under control.
 You can create experiments, branches and set up a percentage for every branch. Then, when you're running an ab-test on PHP you will receive a perfect branch-wise response that following the rules, that you set up.
 
-Can be also used as a feature flag or feature toggle.
-Available for free. 
+Providing feature flags(feature toggles)
+Available for free and open-source. 
 
 You can find the ABRouter product source code by the following link: https://github.com/abrouter/compose
 
