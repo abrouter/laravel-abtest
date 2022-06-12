@@ -5,7 +5,7 @@ namespace Abrouter\LaravelClient\Bridge\ParallelRunning;
 
 use Abrouter\Client\Contracts\TaskContract;
 use Abrouter\Client\Contracts\TaskManagerContract;
-use Illuminate\Bus\Dispatcher;
+use Illuminate\Events\Dispatcher;
 
 class TaskManager implements TaskManagerContract
 {
