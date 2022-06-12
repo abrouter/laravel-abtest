@@ -39,13 +39,13 @@ class AbrouterServiceProvider extends ServiceProvider
             (string) $this->getConfig()->get('abrouter.host')
         );
 
-        $parallelRunningConfigured = false;
+        $kvStorageConfigured = false;
         if ($this->configureKvStorage()) {
             $config->setKvStorageConfig($this->getContainer()->make(KvStorageContract::class));
-            $parallelRunningConfigured = true;
+            $kvStorageConfigured = true;
         }
 
-        if ($parallelRunningConfigured && $this->isParallelRunningEnabled()) {
+        if ($kvStorageConfigured && $this->isParallelRunningEnabled()) {
             $this->configureParallelRunning();
             $config->setParallelRunConfig(new ParallelRunConfig(
                 true,
