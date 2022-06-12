@@ -78,8 +78,10 @@ return [
 
 Parallel running is a feature that allows you to run A/B tests asynchronously. 
 It requires ready-to-use Laravel cache (probably by Redis). 
+
 This feature enables caching of experiment branches to run the experiment locally, then using Laravel built-in queues to sync the data with ABRouter server.
 Please make sure, your supervisor config, queues and caching storage is enabled in Laravel to use.
+
 Parallel running allows to run your A/B tests without blocking. 
 Additionally, you can configure it on your own.
 
