@@ -4,12 +4,12 @@ declare(strict_types = 1);
 namespace Abrouter\LaravelClient\Providers;
 
 use Abrouter\LaravelClient\Bridge\ParallelRunning\ParallelTaskContainer;
-use Illuminate\Events\EventServiceProvider as ServiceProvider;
+use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 use Abrouter\LaravelClient\Bridge\ParallelRunning\ParallelTaskHandler;
 
 class EventServiceProvider extends ServiceProvider
 {
-    protected array $listen = [
+    protected $listen = [
         ParallelTaskContainer::class => [
             ParallelTaskHandler::class,
         ]
