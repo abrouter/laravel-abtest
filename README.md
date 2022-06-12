@@ -25,6 +25,9 @@ You can find the ABRouter product source code by the following link: https://git
 
 🛠 Incredible UI to manage it 
 
+🛠 Parallel running (non-blocking A/B tests running)
+
+
 ## Prepare your first A/B test
 Besides of the installing this package you need to have an account on [ABRouter](https://abrouter.com). Your token and experiment id will be also there.
 Feel free to read step by step instruction [Impelementing A/B tests on Laravel](https://abrouter.com/en/laravel-ab-tests)
@@ -56,12 +59,29 @@ php artisan vendor:publish --tag=abrouter
 Put your ABRouter token in /config/abrouter.php. You can find this token in [ABRouter dashboard](https://abrouter.com/en/board).
 
 ```php
+
+use Abrouter\LaravelClient\Bridge\KvStorage;
+use Abrouter\LaravelClient\Bridge\ParallelRunning\TaskManager;
+
 return [
     'token' => '14da89de1713a74c1ed50aafaff18c24bf372a9913e67e6a7a915def3332a97c9c9ecbe2cd6d3047',
     'host' => 'https://abrouter.com',
+    'parallelRunning' => [
+        'enabled' => true, //parallel running, enabled by default. See next section.
+        'taskManager' => TaskManager::class,
+    ],
+    'kvStorage' => KvStorage::class
 ];
 ```
 
+### Configure Parallel running
+
+Parallel running is a feature that allows you to run A/B tests asynchronously. 
+It requires ready-to-use Laravel cache (probably by Redis). 
+This feature enables caching of experiment branches to run the experiment locally, then using Laravel built-in queues to sync the data with ABRouter server.
+Please make sure, your supervisor config, queues and caching storage is enabled in Laravel to use.
+Parallel running allows to run your A/B tests without blocking. 
+Additionally, you can configure it on your own.
 
 ## :rocket: Usage
 
