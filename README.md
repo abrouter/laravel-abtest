@@ -85,7 +85,7 @@ Please make sure, your supervisor config, queues and caching storage is enabled 
 Parallel running allows to run your A/B tests without blocking. 
 Additionally, you can configure it on your own.
 
-## :rocket: Usage
+## :rocket: Running A/B tests
 
 ```php
 use Abrouter\Client\Client;
@@ -101,8 +101,46 @@ class ExampleController
     }
 }
 ```
+## :rocket: Running feature flags
 
-You can create an experiment and get your token and id of experiment on [ABRouter](https://abrouter.com) or just read the [docs](https://abrouter.com/en/docs). 
+```php
+use Abrouter\Client\Client;
+
+class ExampleController
+{
+    public function __invoke(Client $client)
+    {
+        $isEnabledButton = $client->featureFlags()->run('enabled_button_feature_flag');
+
+        return view('featureFlags', [
+            'enabledButtonFeatureFlag' => $isEnabledButton,
+        ]);
+    }
+}
+```
+
+## :rocket: Sending the stats
+
+```php
+use Abrouter\Client\Client;
+
+class ExampleController
+{
+    public function __invoke(Client $client)
+    {
+        //ABRouter can store more data. Please learn more in EventDTO arguments.
+        $client->statistics()->sendEvent(new EventDTO(
+            null,
+            $userId,
+            'visited_test_page'
+        ));
+    }
+}
+```
+
+### Managing UI
+
+You can create an experiment/feature flags and set up statistics and get your token and id of experiment on [ABRouter](https://abrouter.com) or just read the [docs](https://abrouter.com/en/docs). 
 
 
 ## Example
