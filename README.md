@@ -138,6 +138,9 @@ class ExampleController
 }
 ```
 
+Please note, you can use the IncrementalEventDTO (Abrouter\Client\DTO\IncrementalEventDTO) if you would like to send the increment counter statistics, and SummarizeEventDTO(same namespace) to track some sum. 
+
+
 ### Managing UI
 
 You can create an experiment/feature flags and set up statistics and get your token and id of experiment on [ABRouter](https://abrouter.com) or just read the [docs](https://abrouter.com/en/docs). 
