@@ -5,6 +5,9 @@ You can find base PHP library in https://github.com/abrouter/abrouter-php-client
 
 You're welcome to [visit the docs](https://docs.abrouter.com/docs/intro/).
 
+[Learn how to deploy ABRouter on your server](https://github.com/abrouter/abrouter).
+
+
 # What is the ABRouter service ? 
 
 [ABRouter](https://abrouter.com) is the open-source product to manage experiments(A/B split tests). The service provides easy to manage dashboard to keep experiments under control.
