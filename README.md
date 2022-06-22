@@ -97,7 +97,7 @@ class ExampleController
 {
     public function __invoke(Client $client)
     {
-        $buttonColor = $client->experiments()->run(uniqid(), 'D1D06000-0000-0000-00005030');
+        $buttonColor = $client->experiments()->run(uniqid(), 'button_color');
         return view('button', [
             'color' => $buttonColor->getBranchId(),
         ]);
@@ -126,22 +126,35 @@ class ExampleController
 
 ```php
 use Abrouter\Client\Client;
+use Abrouter\Client\Builders\StatEventBuilder;
 
 class ExampleController
 {
-    public function __invoke(Client $client)
+    public function __invoke(Client $client, StatEventBuilder $statEventBuilder)
     {
-        //ABRouter can store more data. Please learn more in EventDTO arguments.
-        $client->statistics()->sendEvent(new EventDTO(
-            null,
-            $userId,
-            'visited_test_page'
-        ));
+        //sending button_click event as button_click+1
+        $client->statistics()->sendEvent(
+            $eventBuilder
+                ->incremental()
+                ->event('button_click')
+                ->setUserId($userSignature)
+                ->build()
+        );
+        
+        //sending button_click event as button_click+1
+        $client->statistics()->sendEvent(
+            $eventBuilder
+                ->summarize()
+                ->event('purchase')
+                ->setValue(30)
+                ->setUserId($userSignature)
+                ->build()
+        );
     }
 }
 ```
 
-Please note, you can use the IncrementalEventDTO (Abrouter\Client\DTO\IncrementalEventDTO) if you would like to send the increment counter statistics, and SummarizeEventDTO(same namespace) to track some sum. 
+For additional details of sending events please see StatEventBuilder class.
 
 
 ### Managing UI
