@@ -141,7 +141,7 @@ class ExampleController
                 ->build()
         );
         
-        //sending button_click event as button_click+1
+        //sending button_click event as button_click (+30)
         $client->statistics()->sendEvent(
             $eventBuilder
                 ->summarize()
