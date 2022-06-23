@@ -97,7 +97,8 @@ class ExampleController
 {
     public function __invoke(Client $client)
     {
-        $buttonColor = $client->experiments()->run(uniqid(), 'button_color');
+        $userId = auth()->user()->id;
+        $buttonColor = $client->experiments()->run($userId, 'button_color');
         return view('button', [
             'color' => $buttonColor->getBranchId(),
         ]);
@@ -132,12 +133,13 @@ class ExampleController
 {
     public function __invoke(Client $client, StatEventBuilder $statEventBuilder)
     {
+        $userId = auth()->user()->id;
         //sending button_click event as button_click+1
         $client->statistics()->sendEvent(
             $eventBuilder
                 ->incremental()
                 ->event('button_click')
-                ->setUserId($userSignature)
+                ->setUserId($userId)
                 ->build()
         );
         
@@ -147,7 +149,7 @@ class ExampleController
                 ->summarize()
                 ->event('purchase')
                 ->setValue(30)
-                ->setUserId($userSignature)
+                ->setUserId($userId)
                 ->build()
         );
     }
