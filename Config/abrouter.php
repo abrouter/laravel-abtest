@@ -5,7 +5,7 @@ use Abrouter\LaravelClient\Bridge\KvStorage;
 use Abrouter\LaravelClient\Bridge\ParallelRunning\TaskManager;
 
 return [
-    'token' => env('AB_ROUTER_TOKEN'),
+    'token' => env('ABROUTER_TOKEN'),
     'host' => 'https://abrouter.com',
     'parallelRunning' => [
         'enabled' => true,
