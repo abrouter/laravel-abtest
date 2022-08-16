@@ -20,6 +20,6 @@ class KvStorage implements KvStorageContract
 
     public function get(string $key)
     {
-        Cache::store()->get($key);
+        return Cache::store()->get($key);
     }
 }
